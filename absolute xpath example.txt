@@ -1,0 +1,5 @@
+full absolute path:
+/html/body/ntp-app//div/ntp-logo
+
+absolute path:
+//*[@id="logo"]
