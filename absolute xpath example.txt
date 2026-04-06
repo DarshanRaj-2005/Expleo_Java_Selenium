@@ -1,5 +1,58 @@
-full absolute path:
-/html/body/ntp-app//div/ntp-logo
+Absolute Path:
 
-absolute path:
-//*[@id="logo"]
+1.full absolute path:
+ans: /html/body/ntp-app//div/ntp-logo
+
+2.absolute path:
+ans: //*[@id="logo"]
+
+
+CSS Selectors:
+
+3.Finding using id in CSS Selector:
+ans: button#button3
+
+4.Finding using class in CSS selector:
+ans: input.button
+
+5.Finding using attribute in CSS Selector:
+ans: input[value='Buttton1']
+
+6.Finding using Attribute and class in CSS selector:
+ans: input.button[value='Buttton1']
+
+
+WildCards:
+
+7.Finding using startswith in css selector
+ans: input[class^='bu']
+
+8.Finding using endswith in css selector
+ans: input[class$='on']
+
+9.Finding using full word in css selector
+
+ans: input[class*='butt']
+
+Pseudo CSS Selector:
+
+10.Using div > p for getting direct descendant element
+ans: div > input
+
+11.Using div + p for getting sibling
+ans: input.button + input
+
+12.Using div ~ p for getting follow and sibling of div
+ans: div ~ p
+
+13. Using id to get unique
+ans: [class ~= 'my_test']
+
+14.div:first-child is to get first child
+ans: div:first-child
+
+15.div:last-child is to get last child
+ans: div:last-child
+
+16.div:nth-child(n) is to get nth child
+ans: div:nth-child(2)
