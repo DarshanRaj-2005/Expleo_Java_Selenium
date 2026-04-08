@@ -56,3 +56,7 @@ ans: div:last-child
 
 16.div:nth-child(n) is to get nth child
 ans: div:nth-child(2)
+
+Tables:
+//table[@id='table1']/tbody/tr[1]/td[1]
+//table[@id='table1']/thead/tr[1]/th[1]
