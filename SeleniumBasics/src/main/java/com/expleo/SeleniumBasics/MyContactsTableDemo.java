@@ -24,10 +24,23 @@ public class MyContactsTableDemo {
 		WebElement submit = driver.findElement(By.id("signup"));
 		submit.click();
 		
-		List<WebElement> thead = driver.findElements(By.xpath("//*[@id=\"myTable\"]/tr"));
+		List<WebElement> values = driver.findElements(By.xpath("//*[@id=\"myTable\"]/tr/td[2]"));
 		
-		for(WebElement h: thead) {
-			System.out.print(h.getText()+" ");
+		for(WebElement h: values) {
+			System.out.println(h.getText()+" ");
+		}
+		
+		String expected = "Jagadeep KC";
+		
+		int i = 1;
+		for(WebElement h :values) {
+			if(h.getText().equals(expected)) {
+				List<WebElement> match = driver.findElements(By.xpath("//*[@id=\"myTable\"]/tr["+i+"]"));
+				for(WebElement m :match) {
+					System.out.println(m.getText());
+				}
+			}
+			i++;
 		}
 	}
 
