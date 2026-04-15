@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DemoQAWebsitePractice {
@@ -14,26 +15,36 @@ public class DemoQAWebsitePractice {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demoqa.com/browser-windows");
-		String parent = driver.getWindowHandle();
-		System.out.println("Parent Unique Code: "+parent);
+		driver.switchTo().newWindow(WindowType.WINDOW);
 		
-		Set<String> allWindowHandles = driver.getWindowHandles();
-		System.out.println("Count: "+allWindowHandles.size());
+		driver.navigate().to("https://demoqa.com/sample");
+		WebElement h1 = driver.findElement(By.id("sampleHeading"));
 		
-		WebElement windowButton = driver.findElement(By.id("windowButton"));
-		windowButton.click();
+		System.out.println("The New Window Heading: "+h1.getText());
 		
-		Set<String> newallWindowHandles = driver.getWindowHandles();
-		System.out.println("Count of Window: "+newallWindowHandles);
-		System.out.println("Count: "+newallWindowHandles.size());
+//		String parent = driver.getWindowHandle();
+//		System.out.println("Parent Unique Code: "+parent);
+//		
+//		Set<String> allWindowHandles = driver.getWindowHandles();
+//		System.out.println("Count: "+allWindowHandles.size());
 		
-		Iterator<String> iterator = newallWindowHandles.iterator();
-		String parentWindow = iterator.next();
-		String child = iterator.next();
-		driver.switchTo().window(child);
-		WebElement text = driver.findElement(By.id("sampleHeading"));
-		System.out.println("text of child window: "+text.getText());
-		driver.switchTo().window(parentWindow);
+		
+//		windowButton.click();
+//		WebElement windowButton = driver.findElement(By.id("windowButton"));
+		
+//		Set<String> newallWindowHandles = driver.getWindowHandles();
+//		System.out.println("Count of Window: "+newallWindowHandles);
+//		System.out.println("Count: "+newallWindowHandles.size());
+//		
+//		
+//		
+//		Iterator<String> iterator = newallWindowHandles.iterator();
+//		String parentWindow = iterator.next();
+//		String child = iterator.next();
+//		driver.switchTo().window(child);
+//		WebElement text = driver.findElement(By.id("sampleHeading"));
+//		System.out.println("text of child window: "+text.getText());
+//		driver.switchTo().window(parentWindow);
 		
 	}
 

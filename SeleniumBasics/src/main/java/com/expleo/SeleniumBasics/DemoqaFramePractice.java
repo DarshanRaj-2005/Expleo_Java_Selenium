@@ -23,6 +23,8 @@ public class DemoqaFramePractice {
 		driver.switchTo().frame(0);
 		WebElement heading1 = driver.findElement(By.id("sampleHeading"));
 		System.out.println(heading1.getText());
+		
+		
 	}
 
 }
