@@ -36,11 +36,11 @@ public class Assessment_Question {
 
 		WebElement username = driver.findElement(By.id("loginusername"));
 		wait.until(ExpectedConditions.visibilityOf(username));
-		username.sendKeys("darshanraj", Keys.ENTER);
+		username.sendKeys("darshanraj");
 
 		WebElement password = driver.findElement(By.id("loginpassword"));
 		wait.until(ExpectedConditions.visibilityOf(password));
-		password.sendKeys("darshan123", Keys.ENTER);
+		password.sendKeys("darshan123");
 
 		WebElement login = driver.findElement(By.xpath("//*[@id=\"logInModal\"]/div/div/div[3]/button[2]"));
 		wait.until(ExpectedConditions.elementToBeClickable(login));
@@ -131,28 +131,23 @@ public class Assessment_Question {
 		WebElement placeOrder = driver.findElement(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button"));
 		placeOrder.click();
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"name\"]"))).sendKeys("darshan",
-				Keys.ENTER);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"name\"]"))).sendKeys("darshan");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"country\"]"))).sendKeys("india",
-				Keys.ENTER);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"country\"]"))).sendKeys("india");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"city\"]"))).sendKeys("salem",
-				Keys.ENTER);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"city\"]"))).sendKeys("salem");
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"card\"]")))
-				.sendKeys("1234567812345678", Keys.ENTER);
+				.sendKeys("1234567812345678");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"month\"]"))).sendKeys("January",
-				Keys.ENTER);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"month\"]"))).sendKeys("January");
 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"year\"]"))).sendKeys("2026",
-				Keys.ENTER);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"year\"]"))).sendKeys("2026");
 
 		WebElement placebtn = driver.findElement(By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]"));
 		placebtn.click();
 
-		WebElement purchase = driver.findElement(By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]"));
+		WebElement purchase = driver.findElement(By.xpath("/html/body/div[10]/p"));
 
 		if (purchase.getText().contains("Id:")) {
 			System.out.println("Order is placed successfully\n\n");
